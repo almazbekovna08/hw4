@@ -1,7 +1,6 @@
 from django.urls import path
-from main.views import cosmetics
+from main.views import main
 
 urlpatterns=[
-    path('cosmetics/', cosmetics, name='cosmetics')
-
+    path('main/', main, name='main')
 ]
