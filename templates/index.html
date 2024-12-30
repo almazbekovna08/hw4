@@ -5,17 +5,19 @@
     </header>
     <body>
         <style>
-            div{display: flex;
+            .container{display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                margin-bottom: 20px;
             }
-
         </style>
-        <div>
-            <img src="{{main.image.url}}" width="300px" height="300px" alt="">
-            <h2> {{main.title}} </h2>
-            <h5> {{main.description}} </h5>
+        {%for x in main%}
+        <div class = "container">
+            <img src="{{x.image.url}}" width="300px" height="300px" alt="">
+            <h2> {{x.title}} </h2>
+            <h5> {{x.description|slice:"100"}} </h5>
         </div>
+        {%endfor%}
     </body>
 </html>
